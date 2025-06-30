@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organizador Estudiantil - Registro/Login</title>
+  <link rel="stylesheet" href="proyecto_one.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-label="Registro y Login">
+
+    <section id="registroSection" aria-hidden="false">
+      <h2>Crear perfil</h2>
+      <form id="registroForm" novalidate>
+        <input type="text" id="nombre" placeholder="Tu nombre completo" required minlength="3" /> <br>
+        <input type="text" id="usuario" placeholder="Nombre de usuario" required minlength="3" /> <br>
+        <input type="password" id="contrasena" placeholder="Contraseña" required minlength="6" /> <br>
+      </form>
+      <button type="submit">Guardar Perfil</button>
+      <p class="mensaje" id="mensajeRegistro" role="alert"></p>
+      <p>¿Ya tenés perfil? <button type="button" id="btnMostrarLogin" class="link-btn">Iniciar sesión</button></p>
+    </section>
+
+    <section id="loginSection" aria-hidden="true" style="display:none;">
+      <h2>Iniciar sesión</h2>
+      <form id="loginForm" novalidate>
+        <input type="text" id="loginUsuario" placeholder="Usuario" required minlength="3" />
+        <input type="password" id="loginContrasena" placeholder="Contraseña" required minlength="6" />
+        <button type="submit">Ingresar</button>
+      </form>
+      <p class="mensaje" id="mensajeLogin" role="alert"></p>
+      <p>¿No tenés cuenta? <button type="button" id="btnMostrarRegistro" class="link-btn">Crear perfil</button></p>
+    </section>
+
+  </main>
+
+  <script src="proyecto_one.js"></script>
+</body>
+</html>

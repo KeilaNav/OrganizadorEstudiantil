@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organizador Estudiantil - Organizador</title>
+  <link rel="stylesheet" href="proyecto_one.css" />
+</head>
+
+<header>
+      <h3 class="bienvenida" id="bienvenida" aria-live="polite"></h3>
+      <button id="btnCerrarSesion" class="logout-btn" aria-label="Cerrar sesión">Cerrar sesión</button>
+</header>
+<body>
+  <main class="container" role="main" aria-label="Organizador Estudiantil">
+    
+    <h1>Organizador Estudiantil</h1>
+    <section aria-label="Gestión de tareas">
+      <h3>Gestión de Tareas</h3>
+      <form id="tareaForm" novalidate>
+        <input type="text" id="nuevaTarea" placeholder="Agregar una tarea..." autocomplete="off" required minlength="1" />
+        <button type="submit">Agregar</button>
+      </form>
+      <ul id="listaTareas" aria-live="polite" aria-label="Lista de tareas"></ul>
+    </section>
+
+    <section aria-label="Calendario interactivo">
+      <h2>Calendario</h2>
+      <div id="calendarControls" style="text-align:center; margin-bottom: 10px;">
+        <button id="prevMonth" aria-label="Mes anterior">‹</button>
+        <span id="monthYear" aria-live="polite" style="font-weight: bold; margin: 0 15px;"></span>
+        <button id="nextMonth" aria-label="Mes siguiente">›</button>
+      </div>
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section aria-label="Recordatorios">
+      <h3>Recordatorios</h3>
+      <form id="recordatorioForm" novalidate>
+        <input type="text" id="reminderInput" placeholder="Agregar un recordatorio..." autocomplete="off" required minlength="1" />
+        <button type="submit">Agregar</button>
+      </form>
+      <ul id="reminderList" aria-live="polite" aria-label="Lista de recordatorios"></ul>
+    </section>
+
+  </main>
+
+  <script src="proyecto_one.js"></script>
+</body>
+</html>
